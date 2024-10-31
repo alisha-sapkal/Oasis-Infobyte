@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alisha Sapkal's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Alisha Sapkal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Aspiring Frontend Developer</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <main class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am currently pursuing my 3rd year in IT at DYPCOE Akurdi, Pune. I scored <strong>93.20%</strong> on the SSC exam and <strong>86.67%</strong> on the HSC exam.</p>
+            <p>I am passionate about web development, especially front-end technologies, and have hands-on experience in C++ and MySQL.</p>
+        </section>
+        
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development (Frontend)</li>
+                <li>Data Structures and Algorithms in C++</li>
+                <li>Database Management using MySQL</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-carousel">
+                <div class="project">
+                    <img src="p1.png" alt="Project 1">
+                    <h3>Netflix Clone</h3>
+                    <p>Built a Netflix clone using React.</p>
+                </div>
+                <div class="project">
+                    <img src="p2.png" alt="Project 2">
+                    <h3>Currency Converter</h3>
+                    <p>A web app for currency conversion.</p>
+                </div>
+                <div class="project">
+                    <img src="p3.png" alt="Project 3">
+                    <h3>AI-based Model</h3>
+                    <p>Developed a model for electricity demand projection.</p>
+                </div>
+            </div>
+            <button class="carousel-button" id="prev">❮</button>
+            <button class="carousel-button" id="next">❯</button>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"Alisha is a dedicated developer with a keen eye for detail!"</p>
+                <footer>- HOD</footer>
+            </blockquote>
+            <blockquote>
+                <p>"Her projects showcase great creativity and technical skill!"</p>
+                <footer>- AARTI SINGH</footer>
+            </blockquote>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:alisha@example.com">alishasapkal@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alisha-sapkal-06b0ba259/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/alisha-sapkal/" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Alisha Sapkal | <a href="#about">About</a> | <a href="#projects">Projects</a> | <a href="#contact">Contact</a></p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('nav ul li a');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        const projects = document.querySelectorAll('.project');
+        let currentIndex = 0;
+
+        function showProject(index) {
+            projects.forEach((project, i) => {
+                project.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % projects.length;
+            showProject(currentIndex);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+            showProject(currentIndex);
+        });
+        showProject(currentIndex);
+    </script>
+</body>
+</html>
