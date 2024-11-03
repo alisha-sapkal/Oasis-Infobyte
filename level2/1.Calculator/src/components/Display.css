@@ -1,0 +1,26 @@
+/* src/components/Display.css */
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .calculation {
+    font-size: 1rem;
+    color: #bbb;
+    min-height: 20px;
+  }
+  
+  .current-input {
+    font-size: 2rem;
+    color: #fff;
+  }
+  

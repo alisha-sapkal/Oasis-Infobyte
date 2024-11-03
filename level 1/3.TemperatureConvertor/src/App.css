@@ -1,0 +1,83 @@
+/* src/App.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* You can replace this with a background image if desired */
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  color: #fff;
+}
+
+.converter {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.temperature-input, .temperature-display {
+  margin: 20px 0;
+}
+
+.temperature-input label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.temperature-input input, .temperature-input select {
+  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.convert-button {
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.convert-button:hover {
+  background-color: #0056b3;
+}
+
+.temperature-display p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .converter {
+    padding: 20px;
+  }
+
+  .temperature-input input, .temperature-input select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .convert-button {
+    width: 100%;
+  }
+}

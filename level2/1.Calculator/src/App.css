@@ -1,0 +1,15 @@
+/* src/App.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4CAF50, #3F51B5);
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  color: #fff;
+}
